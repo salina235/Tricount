@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tricount - Divisor de Gastos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Tricount</h1>
+        </div>
+
+        <div class="content">
+            
+            <div class="section">
+                <h2>Participantes</h2>
+                <div class="input-group">
+                    <input type="text" id="participanteName" placeholder="Nombre del participante" required>
+                    <button id="addparticipanteBtn">Añadir Participante</button>
+                </div>
+                <div id="participanteList"></div>
+            </div>
+
+            
+            <div class="section">
+                <h2>Participantes Actuales:</h2>
+                <div id="currentParticipants"></div>
+            </div>
+
+           
+            <div class="section">
+                <h2>Gastos</h2>
+                <div class="input-group">
+                    <input type="text" id="expenseDesc" placeholder="Descripción del gasto">
+                    <input type="number" id="expenseAmount" placeholder="Cantidad (€)" step="0.01" min="0">
+                </div>
+                
+                <div class="input-group">
+                    <label>Pagado por:</label>
+                    <select id="expensePayer">
+                        <option value="">Selecciona quién pagó</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>Dividido entre:</label>
+                    <div class="participants-grid" id="participantsCheckboxes"></div>
+                </div>
+                
+                <button id="addExpenseBtn">Añadir Gasto</button>
+                <div id="expenseList"></div>
+            </div>
+
+            
+            <div class="section" id="resultsSection">
+                <h2>Resultados</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
